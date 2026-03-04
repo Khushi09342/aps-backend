@@ -4,9 +4,8 @@
   "description": "APS PowerBI backend",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "func start"
-  },
+  "start": "func start"
+},
   "dependencies": {
     "@azure/functions": "^4.0.0",
     "express": "^5.2.1",
