@@ -56,8 +56,9 @@ app.http('forms', {
                 `https://developer.api.autodesk.com/construction/forms/v1/projects/${projectId}/forms`,
                 {
                     headers: {
-                        "Authorization": `Bearer ${accessToken}`
-                    }
+  Authorization: `Bearer ${token}`,
+  "x-user-id": process.env.ACC_USER_ID
+}
                 }
             );
 

@@ -57,9 +57,10 @@ app.http('reviews', {
             const reviewsResponse = await fetch(
                 `https://developer.api.autodesk.com/construction/reviews/v1/projects/${projectId}/reviews`,
                 {
-                    headers: {
-                        "Authorization": `Bearer ${accessToken}`
-                    }
+                   headers: {
+  Authorization: `Bearer ${token}`,
+  "x-user-id": process.env.ACC_USER_ID
+}
                 }
             );
 
@@ -99,3 +100,4 @@ app.http('reviews', {
         }
     }
 });
+module.exports = app;
